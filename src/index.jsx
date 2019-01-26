@@ -7,7 +7,6 @@ import {initData} from './init'
 import App from './components/App.jsx'
 import './main.scss'
 
-
 const store = createStore(rootReducer)
 
 initData(store)

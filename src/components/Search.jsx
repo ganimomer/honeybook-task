@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {ACTION_TYPES} from '../common/constants'
 import './Search.scss'
 
 const Search = ({query, onChange, className = ''}) => <div className={`search-wrapper ${className}`}>
@@ -22,7 +23,7 @@ Search.propTypes = {
 const mapStateToProps = ({query}) => ({query})
 const mapDispatchToProps = dispatch => ({
     onChange: e => dispatch({
-        type: 'CHANGE_QUERY',
+        type: ACTION_TYPES.CHANGE_QUERY,
         query: e.target.value
     })
 })
