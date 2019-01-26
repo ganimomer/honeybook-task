@@ -1,6 +1,5 @@
 module.exports = {
     "env": {
-        "browser": true,
         "es6": true,
         "node": true
     },
@@ -19,5 +18,10 @@ module.exports = {
         "indent": ["error", 4],
         "quotes": ["error", "single"],
         "semi": ["error", "never"]
+    },
+    settings: {
+        react: {
+            version: 'detect'
+        }
     }
 };

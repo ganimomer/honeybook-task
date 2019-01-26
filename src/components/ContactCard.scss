@@ -1,0 +1,62 @@
+@import '../common/mixins';
+
+$contact-images-height: 225px;
+
+.contact-card {
+  @include contact-card();
+
+  .contact-images {
+    align-self: center;
+    height: $contact-images-height;
+
+    .profile-image {
+      width: 100%;
+      height: $profile-image-height;
+      object-fit: cover;
+      transition: height 500ms;
+    }
+
+    .icon {
+      position: relative;
+      height: 50px;
+      top: -30px;
+      width: auto;
+      left: 5px;
+    }
+
+    transition: height 500ms;
+  }
+
+  &.hovered {
+    .contact-images {
+      height: $contact-images-height - (2 * $contact-description-font-size);
+
+      .profile-image {
+        height: $profile-image-height - (2 * $contact-description-font-size);
+        transition: height 500ms;
+      }
+
+      transition: height 500ms;
+    }
+  }
+
+  font-family: $font-family;
+  border: 1px $border-color solid;
+  margin: 5px;
+
+  .contact-name {
+    font-weight: bold;
+    font-size: $contact-name-font-size;
+    margin-bottom: 10px;
+    color: $main-color;
+  }
+
+  .contact-description {
+    margin-bottom: 10px;
+  }
+
+  .contact-description, .phone-number, .email {
+    font-size: $contact-description-font-size;
+    color: $contact-description-color;
+  }
+}

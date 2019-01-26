@@ -1,0 +1,15 @@
+.contact-list {
+  padding: 50px;
+  background-color: #f0f0f0;
+
+  .contact-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+
+    .contact-list-card {
+      flex: 1 1 auto;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+export const ACTION_TYPES = {
+    ADD_CONTACTS: 'ADD_CONTACTS',
+    CHANGE_QUERY: 'CHANGE_QUERY'
+}

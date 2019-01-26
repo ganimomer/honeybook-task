@@ -1,4 +1,5 @@
 import React from 'react'
+import './EmptyContactCard.scss'
 
 const EmptyContactCard = () => <div className="empty-contact-card">
     <div className="empty-profile-image"></div>

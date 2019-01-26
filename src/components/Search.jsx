@@ -1,16 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-const Search = ({query, onChange}) => <input
-    type="text"
-    className="search"
-    placeholder="Search..."
-    value={query}
-    onChange={onChange}/>
+import './Search.scss'
+
+const Search = ({query, onChange, className = ''}) => <div className={`search-wrapper ${className}`}>
+    <input
+        className="search"
+        type="text"
+        placeholder="Search..."
+        value={query}
+        onChange={onChange}/>
+    <img src='/assets/icon-search.png' className="search-icon"/>
+</div>
 
 Search.propTypes = {
     query: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    className: PropTypes.string
 }
 
 const mapStateToProps = ({query}) => ({query})

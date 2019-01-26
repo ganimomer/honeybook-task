@@ -1,0 +1,23 @@
+@import '../common/mixins';
+
+.empty-contact-card {
+  @include contact-card();
+
+  .empty-profile-image {
+    height: $profile-image-height;
+    background-color: $contact-description-color;
+  }
+
+  .empty-name {
+    height: $contact-name-font-size;
+    width: $contact-card-width - 20px;
+    background-color: $contact-description-color;
+    margin-top: 225px - $profile-image-height;
+    margin-bottom: 10px;
+  }
+
+  .empty-description {
+    background-color: $contact-description-color;
+    height: $contact-description-font-size;
+  }
+}

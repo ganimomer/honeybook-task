@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 import rootReducer from './reducers'
-import {fetchData} from './init'
+import {initData} from './init'
 import App from './components/App.jsx'
+import './main.scss'
+
 
 const store = createStore(rootReducer)
 
-fetchData()
-    .then(contacts => store.dispatch({
-        type: 'ADD_CONTACTS',
-        contacts
-    }))
+initData(store)
 
 ReactDOM.render(<Provider store={store}>
     <App />

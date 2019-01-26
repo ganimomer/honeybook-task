@@ -4,12 +4,15 @@ import PropTypes from 'prop-types'
 import {contact} from '../types'
 import EmptyContactCard from './EmptyContactCard'
 import ContactCard from './ContactCard'
+import './ContactList.scss'
 
-const ContactList = ({isLoading, contacts}) => <section>
-    {
-        isLoading ? <EmptyContactCard key={''}/>:
-            contacts.map(contact => <ContactCard {...contact} key={contact.email}/>)
-    }
+const ContactList = ({isLoading, contacts}) => <section className="contact-list">
+    <div className="contact-list-container">
+        {
+            isLoading ? <EmptyContactCard key={''}/>:
+                contacts.map(contact => <ContactCard {...contact} key={contact.email} className='contact-list-card'/>)
+        }
+    </div>
 </section>
 
 ContactList.propTypes = {

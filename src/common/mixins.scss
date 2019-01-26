@@ -1,0 +1,10 @@
+@import '../common/constants';
+
+@mixin contact-card() {
+  width: $contact-card-width;
+  height: $contact-card-height;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px 15px;
+  background-color: #fff;
+}
